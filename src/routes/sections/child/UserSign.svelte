@@ -1,4 +1,4 @@
-<div class="bg-white p-6 rounded-lg border w-auto">
+<div class="bg-white p-6 rounded-md border w-auto">
 	<h2 class="text-lg font-semibold mb-4">Customer spending</h2>
 
 	<div class="flex items-center mb-2">

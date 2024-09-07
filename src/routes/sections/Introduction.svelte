@@ -1,5 +1,7 @@
 <script lang="ts">
 	import UserSign from './child/UserSign.svelte';
+	import ConnectDataSection from './ConnectDataSection.svelte';
+	import SponsorSection from './SponsorSection.svelte';
 </script>
 
 <div class="bg-white p-4 card shadow-sm border rounded-lg mt-6 h-full w-full">
@@ -20,3 +22,5 @@
 		</div>
 	</div>
 </div>
+<SponsorSection />
+<ConnectDataSection />
