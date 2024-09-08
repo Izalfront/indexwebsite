@@ -1,18 +1,67 @@
 <script lang="ts">
-	import GridBackground from '$lib/components/GridBackground.svelte';
-	import { cn } from '$lib/utils';
+	import GridAndDotBackgrounds from '$lib/components/GridAndDotBackgrounds.svelte';
+	import { Database } from 'lucide-svelte';
+	import MovingCard from './child/MovingCard.svelte';
 </script>
 
-<div
-	class="relative flex h-full w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-slate-900 p-60"
->
-	<div
-		class="pointer-events-none absolute inset-0 z-20 h-full w-full bg-slate-900 [mask-image:radial-gradient(transparent,white)]"
-	/>
+<div class="bg-white p-6 text-center flex items-center justify-center">
+	<GridAndDotBackgrounds>
+		<div class="flex flex-col items-center">
+			<button
+				class="font-medium text-xs no-underline border border-black bg-white text-black rounded-full px-2 py-1 flex items-center gap-1 mb-4"
+			>
+				<Database class="w-4 h-4" />
+				Data harmony
+			</button>
 
-	<GridBackground />
-	<h2 class={cn('relative z-20 text-xl text-white md:text-4xl')}>Tailwind is Awesome</h2>
-	<p class="relative z-20 mt-2 text-center text-neutral-300">
-		Framer motion is the best animation library ngl
-	</p>
+			<p class="text-black text-4xl font-semibold pb-3 pt-4 text-center">Connect your data</p>
+			<p class="text-sm text-gray-600 pb-8 text-center font-medium">
+				Index connects to a growing number of<br />
+				databases and data warehouses
+			</p>
+
+			<button
+				class="bg-gray-900 text-white font-semibold mt-2 py-2 px-4 rounded shadow-lg hover:shadow-xl hover:bg-gray-950 transition"
+			>
+				Get started
+			</button>
+		</div>
+
+		<!-- logo kiri 3 -->
+		<div class="bg-transparent z-0">
+			<div
+				class="border absolute top-1/4 w-12 h-12 left-1 bg-white rounded-full shadow-sm flex items-center justify-center"
+			>
+				<img src="./oracle.png" alt="Oracle Logo" class="w-8 h-8 object-contain" />
+			</div>
+			<div
+				class="border absolute top-10 left-36 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center"
+			>
+				<img src="./mysql.png" alt="Oracle Logo" class="w-8 h-8 object-contain" />
+			</div>
+			<div
+				class="border absolute bottom-32 left-32 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center"
+			>
+				<img src="./postgree.png" alt="Oracle Logo" class="w-8 h-8 object-contain" />
+			</div>
+		</div>
+		<!-- logo kanan 3 -->
+		<div class="bg-transparent z-0">
+			<div
+				class="border absolute top-1/4 w-12 h-12 right-1 bg-white rounded-full shadow-sm flex items-center justify-center"
+			>
+				<img src="./docker.png" alt="Oracle Logo" class="w-8 h-8 object-contain" />
+			</div>
+			<div
+				class="border absolute top-10 right-36 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center"
+			>
+				<img src="./database.png" alt="Oracle Logo" class="w-8 h-8 object-contain" />
+			</div>
+			<div
+				class="border absolute bottom-32 right-32 w-12 h-12 bg-white rounded-full shadow-sm flex items-center justify-center"
+			>
+				<img src="./aws.png" alt="Oracle Logo" class="w-8 h-8 object-contain" />
+			</div>
+		</div>
+	</GridAndDotBackgrounds>
 </div>

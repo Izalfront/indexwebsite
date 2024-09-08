@@ -1,6 +1,9 @@
 <script>
 	import DotBackground from '$lib/components/DotBackground.svelte';
+	import MovingCard from './sections/child/MovingCard.svelte';
 	import Introduction from './sections/Introduction.svelte';
+	import QueryDataSection from './sections/QueryDataSection.svelte';
+	import VisualizeDataSection from './sections/VisualizeDataSection.svelte';
 </script>
 
 <DotBackground>
@@ -26,3 +29,6 @@
 <div class="columns-1">
 	<Introduction />
 </div>
+<MovingCard />
+<QueryDataSection />
+<VisualizeDataSection />
