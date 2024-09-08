@@ -11,7 +11,7 @@
 			<ChartAreaIcon class="w-4 h-4" />
 			See data differently
 		</button>
-		<p class="text-3xl font-semibold text-white pb-2">Analyze. Visualize.<br />Collabrote.</p>
+		<p class="text-3xl font-semibold text-white pb-2">Analyze. Visualize.<br />Collaborate.</p>
 		<p class="text-xs pb-4">The collaborative platform for business analytics.</p>
 		<button class="bg-white text-gray-800 py-1 px-2 rounded-md text-xs font-semibold"
 			>Get started - for free</button
