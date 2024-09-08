@@ -1,6 +1,7 @@
 <script>
 	import DotBackground from '$lib/components/DotBackground.svelte';
 	import MovingCard from './sections/child/MovingCard.svelte';
+	import FooterSection from './sections/FooterSection.svelte';
 	import Introduction from './sections/Introduction.svelte';
 	import PowerfulSection from './sections/PowerfulSection.svelte';
 	import QueryDataSection from './sections/QueryDataSection.svelte';
@@ -34,3 +35,4 @@
 <QueryDataSection />
 <VisualizeDataSection />
 <PowerfulSection />
+<FooterSection />
