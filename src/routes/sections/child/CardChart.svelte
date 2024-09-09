@@ -7,19 +7,31 @@
 		PointElement,
 		LinearScale,
 		Title,
-		CategoryScale
+		CategoryScale,
+		BarController,
+		BarElement
 	} from 'chart.js';
 
-	Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
+	Chart.register(
+		LineController,
+		LineElement,
+		PointElement,
+		LinearScale,
+		Title,
+		CategoryScale,
+		BarController,
+		BarElement
+	);
 
-	let chart: Chart | null = null;
+	let lineChart: Chart | null = null;
+	let barChart: Chart | null = null;
 
 	onMount(() => {
-		const canvas = document.getElementById('myChart') as HTMLCanvasElement;
-		const ctx = canvas.getContext('2d');
+		const canvasLine = document.getElementById('lineChart') as HTMLCanvasElement;
+		const ctxLine = canvasLine.getContext('2d');
 
-		if (ctx) {
-			chart = new Chart(ctx, {
+		if (ctxLine) {
+			lineChart = new Chart(ctxLine, {
 				type: 'line',
 				data: {
 					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -52,12 +64,54 @@
 				}
 			});
 		}
+
+		const canvasBar = document.getElementById('barChart') as HTMLCanvasElement;
+		const ctxBar = canvasBar.getContext('2d');
+		if (ctxBar) {
+			barChart = new Chart(ctxBar, {
+				type: 'bar',
+				data: {
+					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+					datasets: [
+						{
+							label: 'My First Bar Dataset',
+							backgroundColor: 'rgba(54, 162, 235, 0.2)',
+							borderColor: 'rgb(54, 162, 235)',
+							data: [5, 15, 10, 20, 25, 30, 35]
+						}
+					]
+				},
+				options: {
+					responsive: true,
+					maintainAspectRatio: false,
+					scales: {
+						x: {
+							type: 'category',
+							ticks: {
+								maxTicksLimit: 100
+							}
+						},
+						y: {
+							type: 'linear',
+							ticks: {
+								maxTicksLimit: 100
+							}
+						}
+					}
+				}
+			});
+		}
 	});
 </script>
 
 <div class="bg-white p-6 rounded-md border w-auto">
-	<div style="width: 100%; height: 400px;">
-		<canvas id="myChart"></canvas>
+	<div class="flex">
+		<div style="width: 100%; height: 400px;">
+			<canvas id="lineChart"></canvas>
+		</div>
+		<div style="width: 100%; height: 400px;">
+			<canvas id="barChart"></canvas>
+		</div>
 	</div>
 	<h2 class="text-md font-normal mb-4">Card Chart</h2>
 </div>
