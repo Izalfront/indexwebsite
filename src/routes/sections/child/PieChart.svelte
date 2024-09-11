@@ -63,7 +63,7 @@
 	});
 </script>
 
-<div class="bg-white p-4 sm:p-6 rounded-md border overflow-hidden w-full">
+<div class="bg-white p-4 sm:p-6 rounded-md border overflow-hidden">
 	<div class="flex flex-col items-center">
 		<div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
 			<canvas id="pieChart" class="w-full h-auto"></canvas>
