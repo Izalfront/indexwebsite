@@ -63,11 +63,11 @@
 	});
 </script>
 
-<div class="bg-white p-6 rounded-md border w-auto max-w-full overflow-hidden w-full">
-	<div class="flex flex-wrap justify-between items-center">
-		<div class="w-auto h-auto">
-			<canvas id="pieChart" class="max-w-full"></canvas>
+<div class="bg-white p-4 sm:p-6 rounded-md border overflow-hidden w-full">
+	<div class="flex flex-col items-center">
+		<div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl">
+			<canvas id="pieChart" class="w-full h-auto"></canvas>
 		</div>
+		<h2 class="text-md mt-4 mb-2 font-semibold text-gray-700 text-center">Charts Pie Overview</h2>
 	</div>
-	<h2 class="text-md mb-4 font-semibold text-gray-700 pt-4">Charts Pie Overview</h2>
 </div>

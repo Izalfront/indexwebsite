@@ -28,14 +28,12 @@
 	];
 </script>
 
-<div class="card-wrapper overflow-hidden relative w-[50%] ml-52 py-12 my-4">
-	<div class="moving-cards flex">
+<div class="card-wrapper py-12 my-12">
+	<div class="moving-cards">
 		{#each [...cards, ...cards] as card, i (i)}
-			<div
-				class="card bg-white p-4 rounded-lg border shadow-lg hover:shadow-xl flex-shrink-0 w-60 mx-6"
-			>
-				<h2 class="text-lg font-semibold mb-2">{card.title}</h2>
-				<p class="text-gray-700">{card.description}</p>
+			<div class="card">
+				<h2>{card.title}</h2>
+				<p>{card.description}</p>
 			</div>
 		{/each}
 	</div>
@@ -47,14 +45,15 @@
 			transform: translateX(0);
 		}
 		100% {
-			transform: translateX(-70%);
+			transform: translateX(-100%);
 		}
 	}
 
 	.card-wrapper {
 		overflow: hidden;
-		width: 62%; /* Mengatur lebar card-wrapper menjadi 70% */
-		margin: auto; /* Mengatur margin untuk sentralisasi */
+		width: 50%;
+		margin: auto;
+		padding: 0 1rem;
 	}
 
 	.moving-cards {
@@ -67,8 +66,42 @@
 		animation-play-state: paused;
 	}
 
-	/* Smooth transition for hover effect */
 	.card {
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.5rem;
+		border: 1px solid #e0e0e0;
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		flex-shrink: 0;
+		width: 200px;
+		margin: 0 0.5rem;
 		transition: all 0.3s ease;
+	}
+
+	.card:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	}
+
+	.card h2 {
+		font-size: 1rem;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
+	}
+
+	.card p {
+		font-size: 0.875rem;
+		color: #4a4a4a;
+	}
+
+	@media (max-width: 640px) {
+		.card {
+			width: 200px;
+		}
+		.card-wrapper {
+			overflow: hidden;
+			width: 100%;
+			margin: auto;
+			padding: 0 1rem;
+		}
 	}
 </style>

@@ -105,10 +105,10 @@
 </script>
 
 <div class="bg-white p-6 rounded-md border w-auto max-w-full overflow-hidden">
-	<div class="flex flex-wrap justify-between items-center">
+	<div class="flex flex-col md:flex-row flex-wrap justify-between items-center">
 		<div class="w-auto h-auto">
 			<canvas id="barChart" class="max-w-full"></canvas>
 		</div>
 	</div>
-	<h2 class="text-md mb-4 font-semibold text-gray-700 pt-4">Chart Bar</h2>
+	<h2 class="text-md mb-4 font-semibold text-gray-700 pt-4 text-center md:text-left">Chart Bar</h2>
 </div>

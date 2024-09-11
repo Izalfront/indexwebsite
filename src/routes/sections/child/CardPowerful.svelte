@@ -28,7 +28,7 @@
 	];
 </script>
 
-<div class="bg-white p-6 rounded-md border w-auto mx-12">
+<div class="bg-white p-6 rounded-md border w-auto mx-2">
 	<h2 class="text-md font-normal mb-4">Powerful Databases</h2>
 	{#each cards as card}
 		<div class="mb-4">

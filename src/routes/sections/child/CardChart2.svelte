@@ -110,5 +110,5 @@
 			<canvas id="lineChart" class="max-w-full"></canvas>
 		</div>
 	</div>
-	<h2 class="text-md mb-4 font-semibold text-gray-700 pt-4">Chart Line</h2>
+	<h2 class="text-md mb-4 font-semibold text-gray-700 pt-4 text-center md:text-left">Chart Line</h2>
 </div>

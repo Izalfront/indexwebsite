@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import {
 		Chart,
 		LineController,
@@ -7,30 +7,24 @@
 		PointElement,
 		LinearScale,
 		Title,
-		CategoryScale,
-		BarController,
-		BarElement
+		CategoryScale
 	} from 'chart.js';
 
-	Chart.register(
-		LineController,
-		LineElement,
-		PointElement,
-		LinearScale,
-		Title,
-		CategoryScale,
-		BarController,
-		BarElement
-	);
+	Chart.register(LineController, LineElement, PointElement, LinearScale, Title, CategoryScale);
 
 	let lineChart: Chart | null = null;
-	let barChart: Chart | null = null;
 
-	onMount(() => {
+	const createChart = () => {
 		const canvasLine = document.getElementById('lineChart') as HTMLCanvasElement;
 		const ctxLine = canvasLine.getContext('2d');
 
 		if (ctxLine) {
+			// Destroy the existing chart if it exists
+			if (lineChart) {
+				lineChart.destroy();
+			}
+
+			// Create a new chart instance
 			lineChart = new Chart(ctxLine, {
 				type: 'line',
 				data: {
@@ -64,42 +58,16 @@
 				}
 			});
 		}
+	};
 
-		const canvasBar = document.getElementById('barChart') as HTMLCanvasElement;
-		const ctxBar = canvasBar.getContext('2d');
-		if (ctxBar) {
-			barChart = new Chart(ctxBar, {
-				type: 'bar',
-				data: {
-					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-					datasets: [
-						{
-							label: 'My First Bar Dataset',
-							backgroundColor: 'rgba(54, 162, 235, 0.2)',
-							borderColor: 'rgb(54, 162, 235)',
-							data: [5, 15, 10, 20, 25, 30, 35]
-						}
-					]
-				},
-				options: {
-					responsive: true,
-					maintainAspectRatio: false,
-					scales: {
-						x: {
-							type: 'category',
-							ticks: {
-								maxTicksLimit: 100
-							}
-						},
-						y: {
-							type: 'linear',
-							ticks: {
-								maxTicksLimit: 100
-							}
-						}
-					}
-				}
-			});
+	onMount(() => {
+		createChart();
+	});
+
+	onDestroy(() => {
+		// Clean up the chart instance when the component is destroyed
+		if (lineChart) {
+			lineChart.destroy();
 		}
 	});
 </script>
@@ -108,9 +76,6 @@
 	<div class="flex">
 		<div style="width: 100%; height: 400px;">
 			<canvas id="lineChart"></canvas>
-		</div>
-		<div style="width: 100%; height: 400px;">
-			<canvas id="barChart"></canvas>
 		</div>
 	</div>
 	<h2 class="text-md font-normal mb-4">Card Chart</h2>

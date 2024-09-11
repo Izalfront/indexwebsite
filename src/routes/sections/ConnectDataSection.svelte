@@ -1,12 +1,11 @@
 <script lang="ts">
 	import GridAndDotBackgrounds from '$lib/components/GridAndDotBackgrounds.svelte';
 	import { Database } from 'lucide-svelte';
-	import MovingCard from './child/MovingCard.svelte';
 </script>
 
 <div class="bg-white p-6 text-center flex items-center justify-center">
 	<GridAndDotBackgrounds>
-		<div class="flex flex-col items-center">
+		<div class="flex flex-col items-center z-10">
 			<button
 				class="font-medium text-xs no-underline border border-black bg-white text-black rounded-full px-2 py-1 flex items-center gap-1 mb-4"
 			>
@@ -28,7 +27,7 @@
 		</div>
 
 		<!-- logo kiri 3 -->
-		<div class="bg-transparent z-0">
+		<div class="bg-transparent z-0 hidden sm:block">
 			<div
 				class="border absolute top-1/4 w-12 h-12 left-1 bg-white rounded-full shadow-sm flex items-center justify-center"
 			>
@@ -46,7 +45,7 @@
 			</div>
 		</div>
 		<!-- logo kanan 3 -->
-		<div class="bg-transparent z-0">
+		<div class="bg-transparent z-0 hidden sm:block">
 			<div
 				class="border absolute top-1/4 w-12 h-12 right-1 bg-white rounded-full shadow-sm flex items-center justify-center"
 			>
