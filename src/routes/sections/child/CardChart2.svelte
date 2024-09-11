@@ -37,7 +37,7 @@
 					labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
 					datasets: [
 						{
-							label: 'My First dataset',
+							label: 'First dataset',
 							backgroundColor: 'rgba(255, 99, 132, 0.2)',
 							borderColor: 'rgb(255, 99, 132)',
 							data: [0, 10, 15, 10, 20, 14, 40, 60]

@@ -4,7 +4,7 @@
 	import CardPowerful from './child/CardPowerful.svelte';
 </script>
 
-<div class="bg-gray-50 p-6 rounded-lg mx-26">
+<div class="bg-gray-50 p-6 rounded-lg mx-26 my-14">
 	<div class="flex flex-col items-center mt-12">
 		<button
 			class="font-medium text-xs no-underline border border-black bg-white text-black rounded-full px-2 py-1 flex items-center gap-1 mb-4"

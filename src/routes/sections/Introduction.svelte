@@ -1,6 +1,8 @@
 <script lang="ts">
+	import AreaChart from './child/AreaChart.svelte';
 	import CardChart2 from './child/CardChart2.svelte';
 	import ChartBar from './child/ChartBar.svelte';
+	import PieChart from './child/PieChart.svelte';
 	import UserSign from './child/UserSign.svelte';
 	import ConnectDataSection from './ConnectDataSection.svelte';
 	import SponsorSection from './SponsorSection.svelte';
@@ -14,13 +16,9 @@
 			<ChartBar />
 
 			<div class=" md:col-span-2">
-				<UserSign />
+				<AreaChart />
 			</div>
-			<UserSign />
-
-			<UserSign />
-			<UserSign />
-			<UserSign />
+			<PieChart />
 		</div>
 	</div>
 </div>

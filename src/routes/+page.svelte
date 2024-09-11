@@ -33,6 +33,5 @@
 </div>
 <MovingCard />
 <QueryDataSection />
-<VisualizeDataSection />
 <PowerfulSection />
 <FooterSection />
