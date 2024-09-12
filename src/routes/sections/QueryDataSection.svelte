@@ -30,16 +30,17 @@
 			<!-- Mobile view: Card-based layout -->
 			<div class="sm:hidden space-y-4">
 				{#each Array(4) as _, i}
-					<div class="bg-white p-4 rounded-lg shadow border">
+					<div class="bg-white p-4 rounded-lg shadow border mx-6">
 						<div class="grid grid-cols-2 gap-2 text-xs">
-							<div><span class="font-medium">ID:</span> 186352</div>
-							<div><span class="font-medium">Date Joined:</span> 01/31/2022</div>
-							<div><span class="font-medium">City:</span> Vancouver</div>
-							<div><span class="font-medium">Total Spending:</span> $1521.20</div>
-							<div><span class="font-medium">Total Orders:</span> 102</div>
-							<div><span class="font-medium">Last Order:</span> 09/31/2023</div>
+							<div><span class="font-medium text-sm">ID:</span> 186352</div>
+							<div><span class="font-medium text-sm">Date Joined:</span> 01/31/2022</div>
+							<div><span class="font-medium text-sm">City:</span> Vancouver</div>
+							<div><span class="font-medium text-sm">Total Spending:</span> $1521.20</div>
+							<div><span class="font-medium text-sm">Total Orders:</span> 102</div>
+							<div><span class="font-medium text-sm">Last Order:</span> 09/31/2023</div>
 							<div>
-								<span class="font-medium">Membership:</span> <span class="text-blue-600">Plus</span>
+								<span class="font-medium text-sm">Membership:</span>
+								<span class="text-blue-600">Plus</span>
 							</div>
 						</div>
 					</div>

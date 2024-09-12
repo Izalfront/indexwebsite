@@ -15,10 +15,10 @@
 			<UserSign />
 			<ChartBar />
 
-			<div class=" md:col-span-2">
+			<!-- <div class=" md:col-span-2">
 				<AreaChart />
 			</div>
-			<PieChart />
+			<PieChart /> -->
 		</div>
 	</div>
 </div>
